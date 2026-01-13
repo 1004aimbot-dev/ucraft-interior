@@ -2,63 +2,104 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Viewport -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- ========================= -->
+    <!-- Open Graph (썸네일 핵심) -->
+    <!-- ========================= -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="U Craft Interior" />
+    <meta
+      property="og:description"
+      content="목공 · 타일 중심의 감각적인 인테리어 시공"
+    />
+    <meta
+      property="og:image"
+      content="https://uc-interior.pages.dev/assets/og.png"
+    />
+    <meta
+      property="og:url"
+      content="https://uc-interior.pages.dev/"
+    />
+
+    <!-- Twitter / Kakao 보조 -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Title -->
     <title>U Craft Interior</title>
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Config -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              "primary": "#135bec",
+              primary: "#135bec",
               "background-light": "#f6f6f8",
               "background-dark": "#101622",
               "text-dark": "#0d121b",
               "text-muted": "#4c669a",
             },
             fontFamily: {
-              "sans": ["Noto Sans KR", "Public Sans", "sans-serif"],
-              "display": ["Public Sans", "Noto Sans KR", "sans-serif"],
+              sans: ["Noto Sans KR", "Public Sans", "sans-serif"],
+              display: ["Public Sans", "Noto Sans KR", "sans-serif"],
             },
             boxShadow: {
-                "sticky": "0 -4px 12px rgba(0, 0, 0, 0.05)",
-            }
+              sticky: "0 -4px 12px rgba(0, 0, 0, 0.05)",
+            },
           },
         },
-      }
+      };
     </script>
+
+    <!-- Global Style -->
     <style>
       body {
         -webkit-tap-highlight-color: transparent;
       }
-      /* Hide scrollbar for Chrome, Safari and Opera */
+
       .no-scrollbar::-webkit-scrollbar {
-          display: none;
+        display: none;
       }
-      /* Hide scrollbar for IE, Edge and Firefox */
+
       .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
-  }
-}
-</script>
-   // main.tsx or main.jsx
-   import "./index.css";
 
-</head>
+    <!-- Import Map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.2.3",
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+          "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+          "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+        }
+      }
+    </script>
+  </head>
+
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+
+    <!-- App Entry -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
